@@ -19,9 +19,16 @@ def letter_check
     if repeats > most
       most = repeats
       most_repeats = word
+    elsif
+      repeats == most
+      most_repeats = most_repeats + ", " + word
     end
   end
-  puts most_repeats + " has the most repeated letters."
+  if most == 0
+    puts "No words with repeated letters"
+  else
+    puts most_repeats + " has/have the most repeated letters."
+  end
 end
 
 menu
